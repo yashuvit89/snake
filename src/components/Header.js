@@ -28,7 +28,7 @@ export default class Header extends Component {
       <header className="header">
         <h1></h1>
         <button onClick={this.clickStartGame}>Start Game</button>
-        <h3>Score: {currentScore}  Top Score: {localStorage.getItem('topScore')}</h3>
+        <h3>Score: {currentScore}  Top Score: {localStorage.getItem('topScore') || currentScore}</h3>
         <h3>Current direction {this.props.snake.currDir}</h3>
       </header>
     )
